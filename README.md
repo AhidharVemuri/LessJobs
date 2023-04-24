@@ -10,6 +10,7 @@ Please follow the below instructions to install and run this application in your
 6.	After installation on the Visual Studio homepage click the button labelled “Open a local folder”. This will open a prompt window which you can use to select the folder labelled Flask from step 4.
 7.	Use the CTRL+` keyboard shortcut with the backtick character to show the terminal.
 8.	Install the following package dependencies required to run the application,
+    
     o	virtualenv – Use command pip install virtualenv in your command line terminal. Once installed run the command .\env\Scripts\activate.bat for windows OR  source env/bin/activate on Macbook or Macintosh. Upon doing this you should be able to see the virtual that the name env appears in before your directory path.
  
     o	flask and flask-sqlalchemy – Use command pip install flask flask-sqlalchemy 
@@ -18,6 +19,7 @@ Please follow the below instructions to install and run this application in your
     
     o	pandas, numpy – Use the command pip install pandas numpy
 9.	Environment Variables are needed for the application to run. Please follow the instructions on these links to setup environment variables on Windows or Mac,
+    
     o	For Windows – https://phoenixnap.com/kb/windows-set-environment-variable
     
     o	For Mac - https://phoenixnap.com/kb/set-environment-variable-mac
