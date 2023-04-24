@@ -1,0 +1,47 @@
+{%extends 'Blank.html'%}
+
+
+{%block title%}LessJob - Job Applicant Registration{%endblock%}
+
+{%block welcome%}<h1>Job Applicant Registration</h1>
+<h2>Please fill in your details</h2>{%endblock%}
+
+{%block content%}
+<div class="row justify-content-md-center">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+            <div class="card-body">
+                <form action="/candidate_registration" method="POST" class="row g-3">
+                    <div class="col-md-12">
+                        <label for="name" class="form-label">
+                            Name
+                        </label>
+                        <input class="form-control" id="name" type="text" name="name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">
+                            Username
+                        </label>
+                        <input class="form-control" id="email" type="email" name="email" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="password" class="form-label">
+                            Password
+                        </label>
+                        <input class="form-control" id="password" type="password" name="password" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="phone" class="form-label">
+                            Phone Number
+                        </label>
+                        <input class="form-control" id="phone" type="tel" name="phone" required>
+                    </div>
+                    <a href={{url_for('candidate_registration_page')}}>
+                    <button type="submit" class="btn btn-outline-primary">Submit</button></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+                {%endblock%}

@@ -1,0 +1,61 @@
+{%extends 'Blank.html'%}
+
+
+{%block title%}LessJob - Post a Job Opening{%endblock%}
+
+{%block welcome%}<h1>Post a Job Opening</h1>{%endblock%}
+
+{%block content%}
+<div class="row justify-content-md-center">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+            <div class="card-body">
+                <form action="/job_posting" method="POST" class="row g-3">
+
+                    <div class="col-md-6">
+                        <label for="job-title" class="form-label">
+                            Job Title
+                        </label>
+                        <input class="form-control" id="job-title" type="text" name="job-title" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="company" class="form-label">
+                            Company
+                        </label>
+                        <input class="form-control" id="company" type="text" name="company" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="salary" class="form-label">
+                            Salary
+                        </label>
+                        <input class="form-control" id="salary" type="text" name="salary" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="job-type" class="form-label">
+                            Job Type
+                        </label>
+                        <select class="form-select" id="job-type" name="job-type" required>
+                            <option value="">--Select Job Type--</option>
+                            <option value="full-time">Full-Time</option>
+                            <option value="part-time">Part-Time</option>
+                            <option value="contract">Contract</option>
+                            <option value="internship">Internship</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="description" class="form-label">
+                            Job Description
+                        </label>
+                        <textarea class="form-control" id="description" name="description" rows="5" cols="50" required></textarea>
+                    </div>
+
+
+                    <a href={{url_for('job_posting_page')}}><button class="btn btn-primary" type="submit">Submit</button></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}
+

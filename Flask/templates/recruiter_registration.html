@@ -1,0 +1,54 @@
+{%extends 'Blank.html'%}
+
+
+{%block title%}LessJob - Recruiter Registration{%endblock%}
+
+{%block welcome%}<h1>Recruiter Registration</h1>{%endblock%}
+
+{%block content%}
+<div class="row justify-content-md-center">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+            <div class="card-body">
+                <form action="/recruiter_registration" method="POST" class="row g-3">
+                    <div class="col-md-12">
+                        <label for="name" class="form-label">
+                            Name
+                        </label>
+                        <input class="form-control" id="name" type="text" name="name" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">
+                            Username
+                        </label>
+                        <input class="form-control" id="email" type="email" name="email" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="password" class="form-label">
+                            Password
+                        </label>
+                        <input class="form-control" id="password" type="password" name="password" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">
+                            Phone Number
+                        </label>
+                        <input class="form-control" id="phone" type="tel" name="phone" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="company" class="form-label">
+                            Company
+                        </label>
+                        <input class="form-control" id="company" type="text" name="company" required>
+                    </div>
+
+                    <a href={{url_for('recruiter_registration_page')}}><button type="submit" class="btn btn-primary">Submit</button></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+                                 {%endblock%}

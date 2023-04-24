@@ -1,0 +1,35 @@
+{%extends 'Blank.html'%}
+
+
+{%block title%}LessJob - Post a Job Opening{%endblock%}
+
+{%block welcome%}<h1>Update a Job Opening</h1>{%endblock%}
+
+{%block content%}
+<form method="POST">
+
+    <label for="job-title">Job Title:</label>
+    <input type="text" id="job-title" name="job-title" value={{job[1]}} required><br><br>
+
+    <label for="company">Company:</label>
+    <input type="text" id="company" name="company" value={{job[2]}} required><br><br>
+
+    <label for="salary">Salary:</label>
+    <input type="text" id="salary" name="salary" value={{job[4]}} required><br><br>
+
+    <label for="job-type">Job Type:</label>
+    <select id="job-type" name="job-type" value={{job[5]}} required>
+        <option value="">--Select Job Type--</option>
+        <option value="full-time">Full-Time</option>
+        <option value="part-time">Part-Time</option>
+        <option value="contract">Contract</option>
+        <option value="internship">Internship</option>
+    </select><br><br>
+
+    <label for="description">Job Description:</label><br>
+    <textarea id="description" name="description" rows="5" cols="50" required>{{job[3]}}</textarea><br>
+
+
+    <a href='/update/{{job[0]}}'><button class="btn btn-primary" type="submit">Next</button></a>
+</form>
+{%endblock%}

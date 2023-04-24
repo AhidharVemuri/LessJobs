@@ -1,0 +1,18 @@
+{%extends 'blank.html'%}
+
+{%block title%}Thank you - {{name}}{%endblock%}
+
+{%block welcome%} <h4>Thank You for registering with our website {{name}}!!!!</h4>
+<br>{%endblock%}
+
+{%block content%} We are excited to be a part of your career journey.
+<br>
+<br>
+Please log in using your credentials to get started. You can use the button below to go to the login page.
+<br>
+<br>
+<a href={{url_for('login_page')}}><button class="btn btn-primary" type="submit">Go to Login</button></a>
+
+{%endblock%}
+
+

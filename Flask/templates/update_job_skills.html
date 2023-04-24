@@ -1,0 +1,35 @@
+{%extends 'Blank.html'%}
+
+
+{%block title%}LessJobs - Skills Updation Page{%endblock%}
+
+{%block welcome%}<h1>Skills Selection Page</h1>
+<p>Please update the skills required for the job:</p>{%endblock%}
+
+{%block content%}
+<form method="POST">
+    <input type="checkbox" name="skill" value="c"> C<br>
+    <input type="checkbox" name="skill" value="cpp"> C++<br>
+    <input type="checkbox" name="skill" value="csharp"> C#<br>
+    <input type="checkbox" name="skill" value="scala"> Scala<br>
+    <input type="checkbox" name="skill" value="java"> Java<br>
+    <input type="checkbox" name="skill" value="python"> Python<br>
+    <input type="checkbox" name="skill" value="r"> R<br>
+    <input type="checkbox" name="skill" value="MySQL"> MySQL<br>
+    <input type="checkbox" name="skill" value="POSTGRES"> POSTGRES<br>
+    <input type="checkbox" name="skill" value="oraclesql"> OracleSQL<br>
+    <input type="checkbox" name="skill" value="html"> HTML<br>
+    <input type="checkbox" name="skill" value="dotnet"> .NET<br>
+    <input type="checkbox" name="skill" value="angular"> Angular<br>
+    <input type="checkbox" name="skill" value="javascript"> JavaScript<br>
+    <input type="checkbox" name="skill" value="excel"> Excel<br>
+    <input type="checkbox" name="skill" value="tableu"> Tableau<br>
+    <input type="checkbox" name="skill" value="powerbi"> PowerBI<br>
+    <input type="checkbox" name="skill" value="powerpoint"> PowerPoint<br>
+    <input type="checkbox" name="skill" value="aws"> AWS<br>
+    <input type="checkbox" name="skill" value="azure"> Azure<br>
+    <input type="checkbox" name="skill" value="statistics"> Statistics<br>
+    <br>
+    <a href={{url_for('jobs_posted_by_recruiter_page')}}><button class="btn btn-primary" type="submit">Update</button></a>
+</form>
+{%endblock%}

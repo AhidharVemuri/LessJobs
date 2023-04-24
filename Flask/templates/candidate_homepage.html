@@ -1,0 +1,33 @@
+{% extends 'blank.html'%}
+
+{%block title%}Home Page - {{name}}{%endblock%}
+
+{%block welcome%}
+<div class="message"></div>
+<h1>Welcome {{name}}!</h1>
+{%endblock%}
+
+{%block content%}
+<h5>{{message}}</h5>
+
+<a href={{url_for('candidate_skill_select_page')}}>
+    <button type="submit" class="btn btn-outline-primary m-2">
+        Add or Update your skills
+    </button>
+</a>
+<br><a href={{url_for('get_job_recommendations_page')}}>
+    <button type="submit" class="btn btn-outline-primary m-2">
+        Get your Job Recommendations
+    </button>
+</a>
+<br>
+<a href={{url_for('candidate_applications')}}>
+    <button type="submit" class="btn btn-outline-primary m-2">
+        View your applications
+    </button>
+</a>
+<br>
+<a href={{url_for('logout')}}>
+    <button type="submit" class="btn btn-outline-danger m-2">Log Out</button>
+</a>
+{%endblock%}

@@ -1,0 +1,38 @@
+{%extends 'Blank.html'%}
+
+
+{%block title%}LessJob - Find your perfect match{%endblock%}
+
+{%block welcome%}<h1>Welcome to LessJobs!</h1>
+<p>Please log in to continue or register if you don't have an account.</p>
+<h5>{{message}}</h5>{%endblock%}
+
+{%block content%}
+<div class="row justify-content-md-center">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+            <div class="card-body">
+                <form action="/login_page" method="POST" class="row g-3">
+                    <div class="col-md-12">
+                        <label for="username" class="form-label">
+                            Username
+                        </label>
+                        <input class="form-control" id="username" type="text" name="username" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="password" class="form-label">
+                            Password
+                        </label>
+                        <input class="form-control" id="password" type="password" name="password" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a href={{url_for('login_page')}}><button type="submit" class="btn btn-primary ">Log in</button></a>
+                    </div>
+                    <div class="col-md-8 d-flex align-items-center justify-content-center"><div class="me-1">New user?</div> <a href="{{url_for('registration_first_page')}}">Register here</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

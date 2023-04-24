@@ -1,0 +1,97 @@
+{%extends 'Blank.html'%}
+
+
+{%block title%}LessJob - Select Your Skills{%endblock%}
+
+{%block welcome%}<h1>Hey {{name}}!!!</h1>
+<h2>Please check the skills that apply to you</h2>{%endblock%}
+
+{%block content%}
+<form action="/candidate_skill_select" method="POST">
+    <label>
+        <input type="checkbox" name="skills[]" value="c">
+        C
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="cpp">
+        C++
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="csharp">
+        C#
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="scala">
+        Scala
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="java">
+        Java
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="python">
+        Python
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="r">
+        R
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="MySQL">
+        MySQL
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="POSTGRES">
+        PostgreSQL
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="oraclesql">
+        Oracle SQL
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="html">
+        HTML
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="dotnet">
+        .NET
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="angular">
+        Angular
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="javascript">
+        JavaScript
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="excel">
+        Excel
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="tableu">
+        Tableau
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="powerbi">
+        Power BI
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="powerpoint">
+        PowerPoint
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="aws">
+        AWS
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="azure">
+        Azure
+    </label><br>
+    <label>
+        <input type="checkbox" name="skills[]" value="statistics">
+        Statistics
+    </label><br>
+    <a href={{url_for('candidate_skill_select_page')}}><button class="btn btn-primary" type="submit">Submit</button></a>
+</form>
+{%endblock%}

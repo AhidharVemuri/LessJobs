@@ -1,0 +1,33 @@
+{% extends 'blank.html'%}
+
+{%block title%}Home Page - {{name}}{%endblock%}
+
+{%block welcome%}
+<h1>Welcome {{name}}!</h1>
+<br>
+<h4>{{message}}</h4>
+
+{%endblock%}
+
+{%block content%}
+<a href={{url_for('job_posting_page')}}>
+    <button type="submit" class="btn btn-outline-primary m-2">
+        Add a Job Post
+    </button>
+</a>
+<br>
+<a href={{url_for('jobs_posted_by_recruiter_page')}}>
+    <button type="submit" class="btn btn-outline-primary m-2">
+        See your Posts
+    </button>
+</a>
+<br>
+<a href={{url_for('logout')}}>
+    <button type="submit" class="btn btn-outline-danger m-2">
+        Log Out
+    </button>
+</a>
+
+
+
+{%endblock%}

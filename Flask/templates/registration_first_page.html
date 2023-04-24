@@ -1,0 +1,26 @@
+{%extends 'Blank.html'%}
+
+
+{%block title%}LessJob - Register{%endblock%}
+
+{%block welcome%}<h2>Are you applying for jobs or hiring?</h2>{%endblock%}
+
+{%block content%}
+<div class="card">
+    <div class="card-body">
+        <h3>
+            I am applying for jobs
+        </h3>
+        <a href={{url_for('candidate_registration_page')}}><button class="btn btn-primary">Apply Now</button></a>
+    </div>
+</div>
+<br>
+<div class="card">
+    <div class="card-body">
+        <h3>
+            I am hiring
+        </h3>
+        <a href={{url_for('recruiter_registration_page')}}><button class="btn btn-success">Post Jobs</button></a>
+    </div>
+</div>
+        {%endblock%}
