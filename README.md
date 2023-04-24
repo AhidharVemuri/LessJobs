@@ -13,10 +13,13 @@ Please follow the below instructions to install and run this application in your
     o	virtualenv – Use command pip install virtualenv in your command line terminal. Once installed run the command .\env\Scripts\activate.bat for windows OR  source env/bin/activate on Macbook or Macintosh. Upon doing this you should be able to see the virtual that the name env appears in before your directory path.
  
     o	flask and flask-sqlalchemy – Use command pip install flask flask-sqlalchemy 
+    
     o	sklearn – Use command pip install -U scikit-learn
+    
     o	pandas, numpy – Use the command pip install pandas numpy
 9.	Environment Variables are needed for the application to run. Please follow the instructions on these links to setup environment variables on Windows or Mac,
     o	For Windows – https://phoenixnap.com/kb/windows-set-environment-variable
+    
     o	For Mac - https://phoenixnap.com/kb/set-environment-variable-mac
 10.	Setup two environment variables labelled MYSQL_username and MYSQL_password and in those variables store your MySQL workbench username and password respectively.
 11.	At this point all the dependencies for the project have been installed. You may now run the project using the command python app.py in the developer command terminal.
